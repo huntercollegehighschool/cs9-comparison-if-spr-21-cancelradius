@@ -15,13 +15,20 @@ Enter another number: 5
 The smallest number is 2
 '''
 
-number = int(input("Enter a number: "))
+numbers = []
 
-smallest = number
+number = int(input("Enter a number: "))
+numbers.append(number)
 
 number = int(input("Enter another number: "))
+numbers.append(number)
 
-if number < smallest:
-  smallest = number
+number = int(input("Enter a third number: "))
+numbers.append(number)
+
+smallest = numbers[1]
+for number in numbers:
+  if number < smallest:
+    smallest = number
   
-print("The smallest number is ", smallest)
+print("The smallest number is", smallest)
